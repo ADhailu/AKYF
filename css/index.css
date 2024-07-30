@@ -1,0 +1,178 @@
+
+.navbar {
+    transition: background-color 0.3s ease;
+}
+
+
+.navbar-brand {
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.navbar-brand:hover {
+    color: #218838 !important;
+}
+
+.nav-link {
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #218838 !important;
+}
+
+.navbar-toggler {
+    border: none;
+    transition: transform 0.3s ease;
+}
+
+.navbar-toggler:focus {
+    outline: none;
+    transform: rotate(90deg);
+}
+
+
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+#informationDropdown::after {
+    display: none;
+}
+
+
+.hero-section {
+    position: relative;
+    height: 50vh;
+    margin-bottom: 8rem;
+}
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    z-index: 2;
+}
+
+.hero-title {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    animation: fadeInDown 1.5s ease-in-out;
+}
+.hero-carousel {
+    height: 60vh;
+}
+.hero-carousel img {
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(60%);
+}
+
+
+.hero-btn {
+    font-size: 1.25rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    transition: background 0.3s, transform 0.3s;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.hero-btn:hover {
+    transform: scale(1.05);
+}
+
+
+/* Blink animation for caret */
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+@media (max-width: 767px) {
+    .hero-section {
+        position: relative;
+        height: 50vh;
+    }
+    .hero-title {
+        font-size: 2rem;
+        font-weight: bold;
+    }
+    .hero-content {
+        position: absolute;
+        top: 60%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        z-index: 2;
+    }
+    #typed-output{
+        font-size: 1.1rem;
+        text-align: center;
+        font-weight: 300;
+    }
+    .hero-carousel {
+        height: 100vh;
+    }
+    
+}
+.text-justify {
+    text-align: justify;
+}
+
+.carousel-item img {
+    height: 60vh;
+    object-fit: cover;
+}
+.card-img-top {
+object-fit: cover;
+}
+.carousel-item .card-img-top {
+object-fit: cover;
+}
+
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.5); 
+    border-radius: 50%;
+    padding: 10px;
+}
+
+
+/* Animation for content appearing from the bottom */
+@keyframes slideInUp {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.fadeInUp {
+    animation: slideInUp 0.6s ease-out forwards;
+}
+
+/* Initially hide the elements */
+.hidden {
+    opacity: 0;
+    transform: translateY(50px);
+}

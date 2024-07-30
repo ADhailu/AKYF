@@ -1,0 +1,97 @@
+.navbar {
+    background-color: #f8f9fa !important;
+    transition: background-color 0.3s ease;
+}
+
+
+
+.navbar-brand {
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.navbar-brand:hover {
+    color: #218838 !important;
+}
+
+.nav-link {
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #218838 !important;
+}
+
+.navbar-toggler {
+    border: none;
+    transition: transform 0.3s ease;
+}
+
+.navbar-toggler:focus {
+    outline: none;
+    transform: rotate(90deg);
+}
+
+.navbar-toggler-icon {
+    background-image: url('data:image/svg+xml;charset=utf8,%3Csvg viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath stroke="rgba%28255, 255, 255, 1%29" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"/%3E%3C/svg%3E');
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+#informationDropdown::after {
+    display: none;
+}
+
+.hero{
+    height: 60vh;
+}
+@media (max-width: 767.98px) {
+    .hero{
+        height: 100vh;
+    }
+    .swiper{
+        height: 200px !important;
+    }
+}
+.text-justify {
+    text-align: justify;
+}
+
+.swiper {
+    width: 100%;
+    height: 400px; /* Adjust height as needed */
+}
+.swiper .card{
+    height: 100%;
+}
+.swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+/* Animation for content appearing from the bottom */
+@keyframes slideInUp {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.fadeInUp {
+    animation: slideInUp 0.6s ease-out forwards;
+}
+
+/* Initially hide the elements */
+.hidden {
+    opacity: 0;
+    transform: translateY(50px);
+}
