@@ -1,0 +1,154 @@
+.navbar {
+    transition: background-color 0.3s ease;
+    z-index: 1050; /* High z-index to ensure it appears above other content */
+
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.navbar-brand:hover {
+    color: #218838 !important;
+}
+
+.nav-link {
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #218838 !important;
+}
+
+.navbar-toggler {
+    border: none;
+    transition: transform 0.3s ease;
+    z-index: 1051; /* High z-index to ensure it appears above other content */
+
+}
+
+.navbar-toggler:focus {
+    outline: none;
+    transform: rotate(90deg);
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+#informationDropdown::after {
+    display: none;
+}
+
+.hero{
+    height: 60vh;
+}
+
+.text-justify {
+    text-align: justify;
+}
+
+.swiper {
+    width: 100%;
+    height: 400px; /* Adjust height as needed */
+}
+.swiper .card{
+    height: 100%;
+}
+.swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#typed-output{
+    font-size: 1.8rem;
+    text-align: center;
+    font-weight: 300;
+}
+
+/* Animation for content appearing from the bottom */
+@keyframes slideInUp {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.fadeInUp {
+    animation: slideInUp 0.6s ease-out forwards;
+}
+
+/* Initially hide the elements */
+.hidden {
+    opacity: 0;
+    transform: translateY(50px);
+}
+
+.link-light:hover{
+    color: #218838 !important;
+}
+.icons:hover{
+    color: #218838 !important;
+}
+
+#backToTopBtn {
+    display: none; 
+    position: fixed; 
+    bottom: 20px;
+    right: 30px; 
+    z-index: 99; 
+    font-size: 18px; 
+    border: none; 
+    outline: none; 
+    color: white; 
+    cursor: pointer;
+    padding: 15px; 
+    border-radius: 10px;
+    background-color: #217f88;
+
+}
+
+#backToTopBtn:hover {
+    background-color: #095e66;
+}
+
+/* on small screens */
+@media (max-width: 767.98px) {
+    .hero{
+        height: 80vh;
+    }
+    .swiper{
+        height: 200px !important;
+    }
+    .collapse{
+        padding-left: 20px;
+    }
+    .navbar-collapse.slide-in {
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: 75%; /* Adjust width as needed */
+        background: #f8f9fa; /* Background color */
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Optional shadow */
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .navbar-collapse.show.slide-in {
+        transform: translateX(0);
+    }
+
+    .navbar-toggler {
+        z-index: 1000; /* Ensure it appears above the overlay */
+    }
+    .drop-hide{
+        display: none;
+    }
+}
