@@ -77,28 +77,18 @@
             </div>
         </nav>
 
-        <div class="position-relative hero">
-            <div class="position-absolute top-0 start-0 w-100 h-100 d-flex justify-content-center" style="background-image: url('imgs/carousel/guitar-2646826_1280.jpg'); background-size:cover; filter: brightness(130%);">
-               <div class="row justify-content-center">
-                <div class="col-lg-8 col-md-12 pt-5">
-                <div class="card mb-5 mt-5" style="border: none; background:transparent;">
-                    <div class="card-body">
-                        <h1 class="card-title text-light pt-5" id="typed-output"></h1>
-                            <div class="card-text text-center pt-2">
-                                <p class="text-white" id="tagline"></p> 
-                            </div>
-                    </div>
+        <section class="hero position-relative">
+            <div class="position-absolute top-0 start-0 w-100 h-100 d-flex justify-content-center align-items-center hero-background" style="    background-image: url('imgs/carousel/guitar-2646826_1280.jpg');">
+                <div class="container text-center text-light">
+                    <h1 id="typed-output" class="display-4 fw-bold animate__animated animate__fadeInDown"></h1>
+                    <p id="tagline" class="lead animate__animated animate__fadeInUp mt-3 d-none">Explore our extensive collection of musical instruments and accessories available for rent</p>
                 </div>
-                </div>
-                </div>
-
             </div>
-        </div>
-
+        </section>
         
         <section class="hidden" id="rent">
             <div class="container">
-                <h2 class="text-center text-success py-5 mt-5 mt-3">Renting From Us </h2>
+                <h2 class="text-center text-success py-lg-5 py-3 mt-5 mt-3">Renting From Us </h2>
                 <div class="row row-cols-1 row-cols-md-3  g-4 mb-5 pb-lg-5 hidden">
                     <div class="col shadow">
                         <div class="mb-3 p-4">
@@ -160,7 +150,7 @@
                 <div class="swiper-wrapper">
                     <!-- Slide 1 -->
                     <div class="swiper-slide">
-                        <div class="card">
+                        <div class="card pt-lg-5 pt-4">
                             <img src="imgs/music instruments/drum_golden.png" class="card-img-top" alt="Drum">
                             <div class="card-body text-center">
                                 <h5 class="card-subtitle">Drums</h5>
@@ -177,16 +167,16 @@
                     </div>
                    
                     <div class="swiper-slide">
-                        <div class="card">
-                            <img src="imgs/music instruments/trumpet.png" class="card-img-top" alt="Trumpet">
+                        <div class="card p-lg-4">
+                            <img src="imgs/music instruments/trumpet.png" class="card-img-top pt-lg-3" alt="Trumpet">
                             <div class="card-body text-center">
                                 <h5 class="card-subtitle">Trumpet</h5>
                             </div>
                         </div>
                     </div>
                     <div class="swiper-slide">
-                        <div class="card">
-                            <img src="imgs/music instruments/keywithstand.png" class="card-img-top" alt="Key&Stand" style="height: 250px;">
+                        <div class="card pt-lg-4">
+                            <img src="imgs/music instruments/keywithstand.png" class="card-img-top pt-5" alt="Key&Stand" >
                             <div class="card-body text-center">
                                 <h5 class="card-subtitle">Key&Stand</h5>
                             </div>
@@ -195,7 +185,7 @@
                   
                     <div class="swiper-slide">
                         <div class="card">
-                            <img src="imgs/music instruments/sax.png" style="height: 300px;" class="card-img-top" alt="Saxophone">
+                            <img src="imgs/music instruments/saxophone.jpg" class="card-img-top sax" alt="Saxophone">
                             <div class="card-body text-center">
                                 <h5 class="card-subtitle">Saxophone</h5>
                             </div>
@@ -234,7 +224,7 @@
                         </div>
                     </div>
                     <div class="swiper-slide">
-                        <div class="card">
+                        <div class="card pt-lg-5 pt-4 px-lg-2">
                             <img src="imgs/music instruments/bongo-5188141_640.png" class="card-img-top pt-5 mt-lg-5" alt="Mixer">
                             <div class="card-body text-center">
                                 <h5 class="card-subtitle">Percusions</h5>
@@ -318,9 +308,8 @@
 
         <button id="backToTopBtn" class="btn" title="Go to top"><i class="fas fa-chevron-up"></i></button>
 
-        <footer class="text-dark py-5 mt-5" style="background: rgb(254, 252, 252);">
-            <hr class="text-muted">
-            <div class="container pt-4">
+        <footer class="text-dark pt-5 mt-5 bg-light">
+            <div class="container">
                 <div class="row">
                     <div class="col-md-8">
                         <h3 class="text-success">AKYF</h3>
@@ -364,9 +353,9 @@
                         </ul>
                     </div>
                 </div>
-                <hr class="mt-4 mb-4 text-muted">
+                <hr class="mt-4 text-success">
                 <p class="text-center small mb-0">© 2024 AKYF Trading PLC. All rights reserved.</p>
-                <p class="text-center small mb-0">Designed and Developed By <a class="contact_me">Adane Hailu</a> ad23hailu@gmail.com </p>
+                <p class="text-center text-muted small mb-0 mt-2" style="font-size: 14px;">Designed and Developed By <a class="contact_me">Adane Hailu</a> ad23hailu@gmail.com </p>
             </div>
         </footer>
         <script>
@@ -391,25 +380,17 @@
                     'Thinking About Renting An Instrument ?',
                 ],
                 typeSpeed: 50,
-                startDelay: 500,
+                startDelay: 1000,
                 loop: false,
                 showCursor: false,
+                onComplete: function() {
+                var taglineElement = document.querySelector('#tagline');
+                taglineElement.classList.remove('d-none');
+            }
             };
 
             var typedTitle = new Typed('#typed-output', typedTitleOptions);
 
-            // Typed.js configuration for the tagline
-            var typedTaglineOptions = {
-                strings: [
-                    'We are a company that provides services and rentals for musical instruments. Explore our extensive collection of musical instruments and accessories available for rent',
-                ],
-                typeSpeed: 30,
-                startDelay: 4000,
-                loop: false,
-                showCursor: false,
-            };
-
-            var typedTagline = new Typed('#tagline', typedTaglineOptions);
             });
         </script>
     <script src="js/typed.min.js"></script>
