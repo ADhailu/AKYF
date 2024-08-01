@@ -41,6 +41,26 @@
     display: none;
 }
 
+.hero-background {
+    background-size: cover;
+    background-position: center;
+    filter: brightness(70%);
+}
+
+#typed-output {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    opacity: 0;
+}
+
+#tagline {
+    font-size: 1.8rem;
+    opacity: 0;
+    padding-left: 100px !important;
+    padding-right: 100px !important;
+
+}
+
 .hero{
     height: 60vh;
 }
@@ -62,12 +82,6 @@
     justify-content: center;
 }
 
-#typed-output{
-    font-size: 1.8rem;
-    text-align: center;
-    font-weight: 300;
-}
-
 /* Animation for content appearing from the bottom */
 @keyframes slideInUp {
     from {
@@ -81,7 +95,7 @@
 }
 
 .fadeInUp {
-    animation: slideInUp 0.6s ease-out forwards;
+    animation: slideInUp .8s ease-out forwards;
 }
 
 /* Initially hide the elements */
@@ -101,7 +115,7 @@
     display: none; 
     position: fixed; 
     bottom: 20px;
-    right: 30px; 
+    right: 5px; 
     z-index: 99; 
     font-size: 18px; 
     border: none; 
@@ -118,10 +132,17 @@
     background-color: #095e66;
 }
 
+
 /* on small screens */
 @media (max-width: 767.98px) {
     .hero{
-        height: 80vh;
+        height: 70vh;
+    }
+    #typed-output{
+        font-size: 1.8rem;
+    }
+    #tagline{
+        font-size: 1rem;
     }
     .swiper{
         height: 200px !important;
@@ -150,5 +171,15 @@
     }
     .drop-hide{
         display: none;
+    }
+    .fadeInUp {
+        animation: slideInUp .8s ease-out forwards;
+    }
+    .hidden {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    .card-subtitle{
+        font-size: .8rem !important;
     }
 }
