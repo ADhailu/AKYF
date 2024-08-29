@@ -74,10 +74,10 @@
         <!-- Hero Section -->
     <section class="hero-section">
         <div class="hero-content animate__animated animate__fadeIn">
-        <h1 id="typed-output" class="hero-title"></h1>
-        <a href="services.html" class="btn btn-success hero-btn"
-            >Explore Our Services</a
-        >
+            <h1 class="title display-3 text-light">Welcome to AKYF PLC</h1>
+            <p id="typed-output" class="hero-title position-absolute"></p>
+            <a href="services.html" class="btn btn-outline-success hero-btn mt-5 "
+            >Explore Our Services</a>
         </div>
         <div
         id="heroCarousel"
@@ -159,7 +159,7 @@
 
         <section class="hidden">
             <h3 class="text-center text-success"> Popular Categories</h3>
-            <div class="containe">
+            <div class="container">
                 <div class="row row-cols-3 row-cols-md-6 g-5 d-flex justify-content-start align-items-end">
                     <div class="col">
                         <div class="card" style="height: 200px; border:none;">
@@ -200,7 +200,7 @@
                     </div>
                     <div class="col">
                         <div class="card" style="height: 200px; border:none;">
-                            <img src="imgs/music instruments/bongo-5188141_640.png" class="card-img-top pt-5 mt-lg-3" alt="">
+                            <img src="imgs/music instruments/bongos.png" class="card-img-top pt-5 mt-lg-3" alt="">
                              <p class="card-text text-center pt-2">Percussions</p>
                         </div>
                     </div>
@@ -260,8 +260,8 @@
                      <div class="mb-3 text-center">
                         <button class="btn btn-outline-success px-5 py-2">
                             <i class="bi bi-telephone"></i> 0939505286</button>
-                        <button class="btn btn-outline-success px-5 py-2">
-                            <i class="fas fa-envelope"></i> Email Us</button>
+                        <a href="contact.html" class="btn btn-outline-success px-5 py-2">
+                            <i class="fas fa-envelope"></i> Email Us</a>
                         </div>
                         <div class="text-center">
                             <a href="" class="text-info">Have Questions ?</a>
@@ -272,26 +272,27 @@
                         <div class="carousel-inner">
                             <div class="carousel-item active hotel-eq">
                                 <img src="imgs/hotel equipments/coffee-3610143_1280.jpg" class="d-block w-100" alt="..." style="height: 450px; object-fit: cover;">
-                                <div class="carousel-caption d-none d-md-block  h3">Coffe Makers</div>
+                                <div class="carousel-caption  h3">Coffe Makers</div>
+                                
                             </div>
                             <div class="carousel-item hotel-eq">
                                 <img src="imgs/hotel equipments/towels-2822910_1280.jpg" class="d-block w-100" alt="..." style="height: 450px; object-fit: cover;">
-                                <div class="carousel-caption d-none d-md-block h3">Towels</div>
+                                <div class="carousel-caption h3">Towels</div>
 
                             </div>
                             <div class="carousel-item hotel-eq">
                                 <img src="imgs/hotel equipments/lantern-6894507_1280.jpg" class="d-block w-100" alt="..." style="height: 450px; object-fit: cover;">
-                                <div class="carousel-caption d-none d-md-block h3">Lanters</div>
+                                <div class="carousel-caption h3">Lanters</div>
 
                             </div>
                             <div class="carousel-item hotel-eq">
                                 <img src="imgs/hotel equipments/theatre-3653366_1280.jpg" class="d-block w-100" alt="..." style="height: 450px; object-fit: cover;">
-                                <div class="carousel-caption d-none d-md-block h3">Curtains</div>
+                                <div class="carousel-caption h3">Curtains</div>
 
                             </div>
                             <div class="carousel-item hotel-eq">
                                 <img src="imgs/hotel equipments/pexels-tima-miroshnichenko-6195273.jpg" class="d-block w-100" alt="..." style="height: 450px; object-fit: cover;">
-                                <div class="carousel-caption d-none d-md-block h3">Vaccum Cleaners</div>
+                                <div class="carousel-caption h3">Vaccum Cleaners</div>
                             </div>
                         </div>
                     </div>
@@ -383,7 +384,7 @@
         
         <button id="backToTopBtn" class="btn" title="Go to top"><i class="fas fa-chevron-up"></i></button>
 
-       <footer class="text-dark pt-5 mt-5 bg-light">
+        <footer class="text-dark pt-5 mt-5" style="background: rgb(254, 252, 252);">
             <div class="container">
                 <div class="row">
                     <div class="col-md-8">
@@ -429,8 +430,8 @@
                     </div>
                 </div>
                 <hr class="mt-4 mb-4 text-muted">
-                <p class="text-center small mb-0 mb-4">© 2024 AKYF Trading PLC. All rights reserved.</p>
-                <p class="text-center small mb-0 text-muted">Designed and Developed By <a class="contact_me">Adane Hailu</a> ad23hailu@gmail.com </p>
+                <p class="text-center small mb-0">© 2024 AKYF Trading PLC. All rights reserved.</p>
+                <p class="text-center small mb-0 mt-3" style="color: rgb(133, 134, 136);">Designed and Developed By Adane Hailu <a class="contact_me" style="color: rgb(133, 134, 136); cursor: pointer;"> ad23hailu@gmail.com</a> </p>
             </div>
         </footer>
 
@@ -440,7 +441,6 @@
             document.addEventListener("DOMContentLoaded", function() {
             var options = {
                 strings: [
-                    'Welcome to AKYF Trading PLC',
                     'Your trusted partner in musical instruments',
                     'Explore our wide range of products'
                 ],
