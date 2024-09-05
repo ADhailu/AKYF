@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
     <head>
-        <title>Contact - ASKF</title>
+        <title>Home - AKYF </title>
         <!-- Required meta tags -->
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
@@ -25,7 +25,7 @@
     <body>
           <!-- Navbar -->
         <nav class="navbar navbar-expand-sm navbar-white bg-white">
-            <a class="navbar-brand text-success px-3 lead" href="index.html">AKYF PLC</a>
+            <a class="navbar-brand text-success px-3 lead" href="index">AKYF PLC</a>
             <button
                 class="navbar-toggler"
                 type="button"
@@ -39,32 +39,32 @@
             <div class="collapse navbar-collapse slide-in" id="collapsibleNavId">
                 <ul class="navbar-nav ms-auto mt-2 mt-lg-0  px-lg-5">
                     <li class="nav-item">
-                        <a class="nav-link text-dark active" href="index.html" aria-current="page"><i class="px-4 fas fa-home d-lg-none"></i>Home <span class="visually-hidden">(current)</span></a>
+                        <a class="nav-link text-dark active" href="index" aria-current="page"><i class="px-4 fas fa-home d-lg-none"></i>Home <span class="visually-hidden">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-dark" href="rentals.html"><i class="px-4 fas fa-guitar d-lg-none"></i>Rentals</a>
+                        <a class="nav-link text-dark" href="rentals"><i class="px-4 fas fa-guitar d-lg-none"></i>Rentals</a>
                     </li>
                     <li class="nav-item d-lg-none">
-                        <a class="nav-link text-dark" href="services.html"><i class="px-4 fas fa-wrench"></i>Services</a>
+                        <a class="nav-link text-dark" href="services"><i class="px-4 fas fa-wrench"></i>Services</a>
                     </li>
                     <li class="nav-item d-lg-none">
-                        <a class="nav-link text-dark" href="contact.html"><i class="px-4 fas fa-envelope"></i>Contact</a>
+                        <a class="nav-link text-dark" href="contact"><i class="px-4 fas fa-envelope"></i>Contact</a>
                     </li>
                     <li class="nav-item d-lg-none">
-                        <a class="nav-link text-dark" href="about_us.html"><i class="px-4 fas fa-info-circle"></i>About</a>
+                        <a class="nav-link text-dark" href="about_us"><i class="px-4 fas fa-info-circle"></i>About</a>
                     </li>
                     <li class="nav-item d-lg-none">
-                        <a class="nav-link text-dark" href="faq.html"><i class="px-4 fas fa-question-circle"></i> FAQ</a>
+                        <a class="nav-link text-dark" href="faq"><i class="px-4 fas fa-question-circle"></i> FAQ</a>
                     </li>
                     <li class="nav-item dropdown drop-hide">
                         <a class="nav-link dropdown-toggle text-dark" href="#" id="informationDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Explore <i class="fas fa-angle-down" id="dropdownIcon"></i>
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="informationDropdown">
-                            <li><a class="dropdown-item" href="services.html">Services</a></li>
-                            <li><a class="dropdown-item" href="contact.html">Contact</a></li>
-                            <li><a class="dropdown-item" href="about_us.html">About</a></li>
-                            <li><a class="dropdown-item" href="faq.html">FAQ</a></li>
+                            <li><a class="dropdown-item" href="services">Services</a></li>
+                            <li><a class="dropdown-item" href="contact">Contact</a></li>
+                            <li><a class="dropdown-item" href="about_us">About</a></li>
+                            <li><a class="dropdown-item" href="faq">FAQ</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -88,7 +88,7 @@
                     <div class="col-lg-1 d-none d-lg-block"></div>
                     <div class="col-md-6 bg-light p-5 shadow">
  
-                        <form id="myForm" action="3181dc71885dee839678096e7c7e6fe5">
+                            <form id="myForm" action="contact_process.php" method="POST">
                             <div class="mb-3">
                                 <label for="name" class="form-label">Name</label>
                                 <input type="text" class="form-control" name="name" required placeholder="Enter Your Name">
@@ -198,10 +198,10 @@
                     <div class="col-md-2 mb-4">
                         <h6 class="text-success">Quick Links</h6>
                         <ul class="list-unstyled text-muted">
-                            <li><a href="index.html" class="link-dark text-decoration-none mb-2 d-block icons">Home</a></li>
-                            <li><a href="faq.html" class="link-dark text-decoration-none mb-2 d-block icons">FAQ</a></li>
-                            <li><a href="contact.html" class="link-dark text-decoration-none mb-2 d-block icons">Contact</a></li>
-                            <li><a href="about_us.html" class="link-dark text-decoration-none mb-2 d-block icons">About</a></li>
+                            <li><a href="index" class="link-dark text-decoration-none mb-2 d-block icons">Home</a></li>
+                            <li><a href="faq" class="link-dark text-decoration-none mb-2 d-block icons">FAQ</a></li>
+                            <li><a href="contact" class="link-dark text-decoration-none mb-2 d-block icons">Contact</a></li>
+                            <li><a href="about_us" class="link-dark text-decoration-none mb-2 d-block icons">About</a></li>
                         </ul>
                     </div>
                     <div class="col-md-2 mb-4">
@@ -243,37 +243,32 @@
                     $("#loadingText").show();
         
                     $.ajax({
-                        url: "https://formsubmit.co/ajax/ad23hailu@gmail.com",
+                        url: "contact_process.php", // PHP script to handle form submission
                         method: "POST",
                         data: $(this).serialize(), // Serialize the form data
                         dataType: "json",
                         success: function(response){
-                            // Hide the spinner and loading text
+                            // Handle success scenario
                             $("#loadingOverlay").hide();
                             $("#spinner").hide();
                             $("#loadingText").hide();
-                            
-                            // Clear the form data
                             $("#myForm")[0].reset();
-                            
-                    // Show the success modal
                             var successModal = new bootstrap.Modal(document.getElementById('successModal'));
                             successModal.show();
-                            // Scroll to the response section
                             $('html, body').animate({
                                 scrollTop: $(".contact-us-section").offset().top
-                            }, 300); // Adjust the duration as needed
+                            }, 300);
                         },
                         error: function(error){
-                            // Hide the spinner and loading text
+                            // Handle error scenario
                             $("#loadingOverlay").hide();
                             $("#spinner").hide();
                             $("#loadingText").hide();
-                            // Show the error modal
                             var errorModal = new bootstrap.Modal(document.getElementById('errorModal'));
-                                errorModal.show();
+                            errorModal.show();
                         }
                     });
+                    
                 });
             });
         </script>
