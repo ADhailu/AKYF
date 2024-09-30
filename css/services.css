@@ -96,6 +96,57 @@
     cursor: pointer;
 }
 
+/* Imported Speakers Section Styles */
+.imported-speakers-section {
+    background-color: #f8f9fa;
+    padding: 3rem 0;
+}
+
+.imported-speakers-section h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 1.5rem;
+}
+
+.imported-speakers-section p {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+.imported-speakers-section .btn {
+    font-size: 1rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.imported-speakers-section .btn:hover {
+    background-color: #218838;
+    color: #fff;
+}
+
+.imported-speakers-section .carousel-inner img {
+    max-height: 450px; /* Adjust this value to make the images smaller */
+    width: auto;
+    margin: 0 auto;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.imported-speakers-section .carousel-control-prev-icon,
+.imported-speakers-section .carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    padding: 10px;
+}
+
+.imported-speakers-section .carousel-control-prev-icon:hover,
+.imported-speakers-section .carousel-control-next-icon:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
 footer span{
     font-size: 1rem;
 }

@@ -1,7 +1,11 @@
+body {
+    overflow-x: hidden;
+}
+
+/* Navbar Styles */
 .navbar {
     transition: background-color 0.3s ease;
     z-index: 1050; /* High z-index to ensure it appears above other content */
-
 }
 
 .navbar-brand {
@@ -26,7 +30,6 @@
     border: none;
     transition: transform 0.3s ease;
     z-index: 1051; /* Higher z-index for the toggle button */
-
 }
 
 .navbar-toggler:focus {
@@ -34,20 +37,21 @@
     transform: rotate(90deg);
 }
 
-
 .dropdown:hover .dropdown-menu {
     display: block;
 }
+
 #informationDropdown::after {
     display: none;
 }
 
-
+/* Hero Section Styles */
 .hero-section {
     position: relative;
     height: 50vh;
     margin-bottom: 8rem;
 }
+
 .hero-content {
     position: absolute;
     top: 50%;
@@ -64,15 +68,16 @@
     animation: fadeInDown 1.5s ease-in-out;
     padding-left: 100px;
 }
+
 .hero-carousel {
     height: 60vh;
 }
+
 .hero-carousel img {
     height: 100%;
     object-fit: cover;
     filter: brightness(60%);
 }
-
 
 .hero-btn {
     font-size: 1.25rem;
@@ -83,23 +88,24 @@
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
     animation: pulseButton 2s infinite;
 }
-@keyframes pulseButton {
-    0% {
-      transform: scale(1);
-    }
-    50% {
-      transform: scale(1.05);
-    }
-    100% {
-      transform: scale(1);
-    }
-  }
+
 .hero-btn:hover {
     transform: scale(1.05);
 }
 
+/* Keyframes */
+@keyframes pulseButton {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
 
-/* Blink animation for caret */
 @keyframes blink {
     0% { opacity: 1; }
     50% { opacity: 0; }
@@ -117,30 +123,6 @@
     }
 }
 
-
-.text-justify {
-    text-align: justify;
-}
-
-.carousel-item img {
-    height: 60vh;
-    object-fit: cover;
-}
-.card-img-top {
-object-fit: cover;
-}
-.carousel-item .card-img-top {
-object-fit: cover;
-}
-
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-    background-color: rgba(0, 0, 0, 0.5); 
-    border-radius: 50%;
-    padding: 10px;
-}
-
-/* Animation for content appearing from the bottom */
 @keyframes slideInUp {
     from {
         transform: translateY(50px);
@@ -152,26 +134,51 @@ object-fit: cover;
     }
 }
 
-.fadeInUp {
-    animation: slideInUp .8s ease-out forwards;
+/* Utility Classes */
+.text-justify {
+    text-align: justify;
 }
 
-
-/* Initially hide the elements */
 .hidden {
     opacity: 0;
     transform: translateY(50px);
 }
 
-
-.link-light:hover{
-    color: #218838 !important;
-}
-.icons:hover{
-    color: #218838 !important;
+.fadeInUp {
+    animation: slideInUp 0.8s ease-out forwards;
 }
 
+/* Carousel Styles */
+.carousel-item img {
+    height: 60vh;
+    object-fit: cover;
+}
 
+.card-img-top {
+    object-fit: cover;
+}
+
+.carousel-item .card-img-top {
+    object-fit: cover;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.5); 
+    border-radius: 50%;
+    padding: 10px;
+}
+
+/* Link Hover Styles */
+.link-light:hover {
+    color: #218838 !important;
+}
+
+.icons:hover {
+    color: #218838 !important;
+}
+
+/* Back to Top Button */
 #backToTopBtn {
     display: none; 
     position: fixed; 
@@ -186,14 +193,13 @@ object-fit: cover;
     padding: 15px; 
     border-radius: 10px;
     background-color: #217f88;
-
 }
 
 #backToTopBtn:hover {
     background-color: #095e66;
 }
 
-/* handling small screen responsiveness */
+/* Small Screen Responsiveness */
 @media (max-width: 767px) {
     .hero-section {
         position: relative;
@@ -206,10 +212,10 @@ object-fit: cover;
         width: 100%;
         z-index: 2;
     }
-    .hero-title{
+    .hero-title {
         padding-left: 30px !important;
     }
-    #typed-output{
+    #typed-output {
         font-size: 1.1rem;
         text-align: center;
         font-weight: 300;
@@ -217,7 +223,7 @@ object-fit: cover;
     .hero-carousel {
         height: 100vh;
     }
-    .collapse{
+    .collapse {
         padding-left: 20px;
     }
     .navbar-collapse.slide-in {
@@ -231,15 +237,13 @@ object-fit: cover;
         transform: translateX(100%);
         transition: transform 0.3s ease-in-out;
     }
-
     .navbar-collapse.show.slide-in {
         transform: translateX(0);
     }
-    .drop-hide{
+    .drop-hide {
         display: none;
     }
-    #backToTopBtn{
+    #backToTopBtn {
         right: 25px;
     }
-    
 }
