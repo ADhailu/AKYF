@@ -1,5 +1,6 @@
 body {
     overflow-x: hidden;
+    font-family: 'Poppins', sans-serif;
 }
 
 /* Navbar Styles */
@@ -246,4 +247,315 @@ body {
     #backToTopBtn {
         right: 25px;
     }
+}
+
+/* Popular Categories Section */
+.category-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    height: 200px;
+    border: none;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.category-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.category-card img {
+    transition: transform 0.3s ease;
+    flex: 1;
+    object-fit: contain;
+    padding: 1rem;
+}
+
+.category-card .card-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+/* What We Offer Section - Updated */
+.offer-card {
+    transition: all 0.3s ease;
+    border: none;
+    background: #f8f9fa;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    overflow: hidden; /* Prevent icon overflow during zoom */
+}
+
+.offer-card:hover {
+    background: #f8f9fa; /* Keep the same background on hover */
+}
+
+.offer-card i {
+    transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    display: inline-block;
+    transform-origin: center;
+}
+
+.offer-card:hover i {
+    transform: scale(1.4);
+}
+
+.offer-card h4 {
+    margin: 1rem 0;
+}
+
+.offer-card p {
+    margin-top: auto;
+    color: #6c757d;
+}
+
+/* Optional: Add a subtle rotation to the icon for more interest */
+@keyframes slight-rotate {
+    0% { transform: scale(1.4) rotate(0deg); }
+    25% { transform: scale(1.4) rotate(5deg); }
+    75% { transform: scale(1.4) rotate(-5deg); }
+    100% { transform: scale(1.4) rotate(0deg); }
+}
+
+.offer-card:hover i {
+    animation: slight-rotate 1s ease infinite;
+}
+
+/* Why Choose Us Section - Updated Styles */
+.reason-card {
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    border: none;
+    background: #ffffff;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    padding: 2rem;
+    z-index: 1;
+}
+
+.reason-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #28a745, #20c997);
+    opacity: 0;
+    z-index: -1;
+    transition: opacity 0.4s ease;
+}
+
+.reason-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+.reason-card:hover::before {
+    opacity: 1;
+}
+
+.reason-card i {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    transition: all 0.4s ease;
+    position: relative;
+}
+
+.reason-card:hover i {
+    transform: rotateY(360deg);
+    color: white !important;
+}
+
+.reason-card h5 {
+    transition: all 0.4s ease;
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.reason-card p {
+    margin-top: auto;
+    transition: all 0.4s ease;
+    position: relative;
+}
+
+.reason-card:hover h5,
+.reason-card:hover p {
+    color: white !important;
+}
+
+/* Add counter animation */
+.reason-card .counter {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 3rem;
+    font-weight: bold;
+    opacity: 0.1;
+    transition: all 0.4s ease;
+}
+
+.reason-card:hover .counter {
+    opacity: 0.2;
+    color: white;
+    transform: scale(1.2);
+}
+
+/* Add floating animation for icons */
+@keyframes floating {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+.reason-card:hover i {
+    animation: floating 2s ease infinite;
+}
+
+/* Hotel Equipment Section */
+.hotel-eq-section {
+    background: #f8f9fa;
+    margin-top: 4rem;
+    padding: 2rem 0;
+}
+
+.hotel-eq-content {
+    padding: 2rem;
+}
+
+.hotel-eq img {
+    filter: brightness(0.7);
+    transition: filter 0.3s ease;
+}
+
+.hotel-eq:hover img {
+    filter: brightness(0.9);
+}
+
+/* Footer Styles */
+.footer {
+    background: linear-gradient(to right, #f8f9fa, #ffffff);
+    padding-top: 4rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(to right, #28a745, #20c997);
+}
+
+.footer-brand {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 1.5rem;
+}
+
+.footer-brand::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 50px;
+    height: 2px;
+    background: #28a745;
+    transition: width 0.3s ease;
+}
+
+.footer-brand:hover::after {
+    width: 100%;
+}
+
+.footer-links {
+    position: relative;
+    padding-left: 0;
+}
+
+.footer-links li {
+    margin-bottom: 0.75rem;
+    transition: transform 0.3s ease;
+}
+
+.footer-links li:hover {
+    transform: translateX(5px);
+}
+
+.footer-links a {
+    color: #6c757d;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    display: inline-block;
+    position: relative;
+}
+
+.footer-links a:hover {
+    color: #28a745;
+}
+
+.social-links {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.social-icon {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #f8f9fa;
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+    background: #28a745;
+    transform: translateY(-5px);
+}
+
+.social-icon:hover i {
+    color: white !important;
+}
+
+.contact-info {
+    position: relative;
+}
+
+.contact-info p {
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.contact-info i {
+    color: #28a745;
+}
+
+.footer-bottom {
+    border-top: 1px solid #dee2e6;
+    padding: 1.5rem 0;
+    margin-top: 3rem;
+}
+
+.developer-credit {
+    transition: all 0.3s ease;
+}
+
+.developer-credit:hover {
+    color: #28a745 !important;
 }
