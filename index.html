@@ -49,7 +49,7 @@
         data-bs-toggle="collapse"
         data-bs-target="#collapsibleNavId"
         aria-controls="collapsibleNavId"
-        aria-expanded="false"
+        aria-expanded="falsef"
         aria-label="Toggle navigation"
       >
         <span class="navbar-toggler-icon"></span>
@@ -115,11 +115,10 @@
     <!-- Hero Section -->
     <section class="hero-section">
       <div class="hero-content animate__animated animate__fadeIn">
-        <h1 class="title display-3 text-light">Welcome to AKYF PLC</h1>
-        <p id="typed-output" class="hero-title position-absolute"></p>
-        <a href="services" class="btn btn-outline-success hero-btn mt-5"
-          >Explore Our Services</a
-        >
+        <div id="typed-output" class="hero-title"></div>
+        <div>
+        <a href="services" class="btn btn-outline-light hero-btn mt-lg-5">Explore Our Services</a>
+        </div>
       </div>
       <div
         id="heroCarousel"
@@ -491,131 +490,103 @@
       <i class="fas fa-chevron-up"></i>
     </button>
 
-    <footer class="text-dark pt-5 mt-5" style="background: rgb(254, 252, 252)">
-        <div class="container">
+    <footer class="footer">
+      <div class="container">
           <div class="row">
-            <div class="col-md-8">
-              <h3 class="text-success">AKYF</h3>
-              <p class="text-muted">
-                Importing high-quality musical instruments and top-notch hotel
-                equipment. Delivering excellence and innovation to your door.
-              </p>
-              <ul class="list-unstyled d-flex">
-                <li>
-                  <a href="#" class="text-dark"
-                    ><i class="bi bi-facebook fa-lg icons"></i
-                  ></a>
-                </li>
-                <li class="ms-5">
-                  <a href="#" class="text-dark"
-                    ><i class="bi bi-telegram fa-lg icons"></i
-                  ></a>
-                </li>
-                <li class="ms-5">
-                  <a href="#" class="text-dark"
-                    ><i class="bi bi-twitter fa-lg icons"></i
-                  ></a>
-                </li>
-                <li class="ms-5">
-                  <a href="#" class="text-dark"
-                    ><i class="bi bi-instagram fa-lg icons"></i
-                  ></a>
-                </li>
-              </ul>
-            </div>
-            <div class="col-md-2 mb-4">
-              <h6 class="text-success">Quick Links</h6>
-              <ul class="list-unstyled text-muted">
-                <li>
-                  <a
-                    href="index"
-                    class="link-dark text-decoration-none mb-2 d-block icons"
-                    >Home</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="faq"
-                    class="link-dark text-decoration-none mb-2 d-block icons"
-                    >FAQ</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="contact"
-                    class="link-dark text-decoration-none mb-2 d-block icons"
-                    >Contact</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="about_us"
-                    class="link-dark text-decoration-none mb-2 d-block icons"
-                    >About</a
-                  >
-                </li>
-              </ul>
-            </div>
-            <div class="col-md-2 mb-4">
-              <h6 class="text-success">Contact Information</h6>
-              <ul class="list-unstyled">
-                <li>
-                  <p class="mb-2" style="font-size: 15px">Postal Address:</p>
-                  <p class="mb-3 text-muted">11884 GPO Abel Kussia</p>
-                </li>
-                <li>
-                  <p class="mb-2">Phones:</p>
-                  <p class="mb-1 text-muted">+8613265132410</p>
-                  <p class="mb-1 text-muted">+251922448573</p>
-                  <p class="mb-3 text-muted">+251912790252</p>
-                </li>
-                <li>
-                  <p class="mb-2">Email:</p>
-                  <p class="mb-1 text-muted">abelkussia30@gmail.com</p>
-                  <p class="mb-0 text-muted">akyftradingplc@gmail.com</p>
-                </li>
-              </ul>
-            </div>
+              <div class="col-lg-4 col-md-6">
+                  <h3 class="footer-brand">AKYF</h3>
+                  <p class="footer-description">
+                      Importing high-quality musical instruments and top-notch hotel equipment. 
+                      Delivering excellence and innovation to your door.
+                  </p>
+                  <div class="footer-social">
+                      <a href="#" class="social-icon">
+                          <i class="bi bi-facebook"></i>
+                      </a>
+                      <a href="#" class="social-icon">
+                          <i class="bi bi-telegram"></i>
+                      </a>
+                      <a href="#" class="social-icon">
+                          <i class="bi bi-twitter"></i>
+                      </a>
+                      <a href="#" class="social-icon">
+                          <i class="bi bi-instagram"></i>
+                      </a>
+                  </div>
+              </div>
+              <div class="col-lg-2 col-md-6 footer-links">
+                  <h6>Quick Links</h6>
+                  <ul>
+                      <li><a href="index">Home</a></li>
+                      <li><a href="faq">FAQ</a></li>
+                      <li><a href="contact">Contact</a></li>
+                      <li><a href="about_us">About</a></li>
+                  </ul>
+              </div>
+              <div class="col-lg-3 col-md-6 footer-contact">
+                  <h6>Contact Information</h6>
+                  <p><i class="bi bi-geo-alt"></i> 11884 GPO Abel Kussia</p>
+                  <p><i class="bi bi-telephone"></i> +8613265132410</p>
+                  <p><i class="bi bi-telephone"></i> +251922448573</p>
+                  <p><i class="bi bi-telephone"></i> +251912790252</p>
+                  <p><i class="bi bi-envelope"></i> abelkussia30@gmail.com</p>
+                  <p><i class="bi bi-envelope"></i> akyftradingplc@gmail.com</p>
+              </div>
           </div>
-          <hr class="mt-4 mb-4 text-muted" />
-          <p class="text-center small mb-0">
-            © 2024 AKYF Trading PLC. All rights reserved.
-          </p>
-          <p
-            class="text-center small mb-0 mt-3"
-            style="color: rgb(133, 134, 136)"
-          >
-            Designed and Developed By Adane Hailu
-            <a
-              class="contact_me"
-              style="color: rgb(133, 134, 136); cursor: pointer"
-            >
-              ad23hailu@gmail.com</a
-            >
-          </p>
-        </div>
-      </footer>
+          <div class="footer-bottom">
+              <p>© 2024 AKYF Trading PLC. All rights reserved.</p>
+              <p class="developer-credit">
+                  Designed and Developed By Adane Hailu 
+                  <a href="mailto:ad23hailu@gmail.com">ad23hailu@gmail.com</a>
+              </p>
+          </div>
+      </div>
+  </footer>
 
     <script src="js/slideUp.js"></script>
     <script src="js/toggle_nav_icon.js"></script>
     <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        var options = {
-          strings: [
-            "Your trusted partner in musical instruments",
-            "Explore our wide range of products",
-          ],
-          typeSpeed: 80,
-          backSpeed: 30,
-          backDelay: 2500,
-          startDelay: 1000,
-          loop: true,
-          showCursor: false,
-        };
+document.addEventListener('DOMContentLoaded', function() {
+    // Create welcome modal
+    const welcomeModal = document.createElement('div');
+    welcomeModal.classList.add('welcome-modal');
+    welcomeModal.innerHTML = `
+        <div class="welcome-content">
+            <h1>Welcome to AKYF</h1>
+            <p>Your Trusted Partner in Musical Excellence</p>
+        </div>
+    `;
+    document.body.appendChild(welcomeModal);
 
-        var typed = new Typed("#typed-output", options);
-      });
-    </script>
+    // Show modal
+    setTimeout(() => {
+        welcomeModal.classList.add('show');
+    }, 500);
+
+    // Remove modal
+    setTimeout(() => {
+        welcomeModal.classList.remove('show');
+        setTimeout(() => {
+            welcomeModal.remove();
+        }, 500);
+    }, 3000);
+
+    // Initialize Typed.js
+    new Typed("#typed-output", {
+        strings: [
+            "Your trusted partner in musical instruments",
+            "Explore our wide range of products"
+        ],
+        typeSpeed: 80,
+        backSpeed: 30,
+        backDelay: 2500,
+        startDelay: 3500, // Start after welcome modal
+        loop: true,
+        showCursor: true,
+        cursorChar: '|'
+    });
+});
+</script>
     <script src="js/typed.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
